@@ -16,7 +16,7 @@ This repository contains the source code for the official website of **Glenview 
 - Zaneerah Essop: UI/UX Designer
 - Karabelo Borotho: Support Engineer and Developer
 
-For any queries concerning this repository, please contact **Jayden Harold**, jayden_harold@amicisinnovations.co.za
+>For any queries concerning this repository, please contact **Jayden Harold**, jayden_harold@amicisinnovations.co.za. <br>
 If you are experiencing any technical difficulties or notice any bugs within the source code, please contact **Karabelo Borotho**, karabelo_borotho@amicisinnovations.co.za
 
 ## 🌐 Website
