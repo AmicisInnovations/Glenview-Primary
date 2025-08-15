@@ -1,0 +1,416 @@
+:root{
+    --background-color:rgba(231, 217, 199, 0.703);
+    --primary-color: #E7D9C7;
+    --text-color: #135715;
+    --accent-color: #135715;
+}
+
+
+/* ====== General Reset ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Teachers';
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* ====== Navigation Bar ====== */
+.nav-container {
+    font-family:'Teachers';
+    background-color: var(--primary-color); /* Beige background as in design */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+#nav-logo {
+    height: 50px;
+    /* IMAGE PLACEHOLDER - Add school logo here */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+     justify-content: space-evenly; /* Spread items evenly */
+    flex: 1; /* Take up available space */
+    gap: 0; /* Remove fixed gap so spacing is even */
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-links, .dropdwn {
+    font-family: 'Teachers';
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.dropdwn-content {
+    font-family:'Teachers';
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #13571571;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    min-width: 180px;
+    z-index: 10;
+}
+
+.dropdwn-content a {
+    font-family:'Teachers';
+    display: block;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.dropdwn-content a:hover {
+    background: #E7D9C7;
+    color: var(--text-color);
+}
+
+li:hover .dropdwn-content {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ====== Intro Section ====== */
+#intro-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+    gap: 10rem;
+    min-height: 80vh;
+}
+
+#intro-text-container {
+    max-width: 700px;
+    font-size: 10rem;
+    position: relative; /* Needed for absolute positioning of the logo */
+    text-align: center;
+    padding: 2rem;
+
+}
+
+
+#intro-text-container::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the logo */
+    width: 400px; /* Adjust size */
+    height: 400px;
+    background: url('/images/intrologo.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.4; /* Watermark effect */
+    z-index: 0;
+}
+
+#intro-text-container * {
+    position: relative;
+    z-index: 1; /* Ensures text and button appear above the logo */
+    
+}
+
+
+#intro-text-container h2 {
+    font-family: 'Blaka Hollow';
+    font-size: 50px;
+    color: var(--accent-color);
+    align-content: center;
+    
+}
+
+#intro-text-container p {
+    font-family: 'Teachers';
+    color: black;
+    margin-top: 1rem;
+    font-size: 18px;
+    font-weight:bold;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#intro-text-container button {
+     border: none;
+    color: var(--text-color);
+  background: rgba(231, 217, 199, 0.46);
+  border-radius: 50px;
+  width: 97.93px;
+  height: 30.7px;
+  position: relative;
+  left: 0px;
+  top: 13px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.398);
+}
+
+#intro-text-container button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#intro-image-container img {
+    margin-top: -90px;
+    max-width: 400px;
+    height: auto;
+    margin-left: -50px;
+    object-fit: contain;
+    
+    /* IMAGE PLACEHOLDER - Add student group photo here */
+}
+
+/* ====== Celebrating Section ====== */
+
+
+
+
+
+.frame-5,
+.frame-5 * {
+  box-sizing: border-box;
+}
+.frame-5 {
+  background: rgba(231, 217, 199, 0.2);
+  height: 263px;
+  position: relative;
+  overflow: hidden;
+}
+.image-2 {
+  width: 592px;
+  height: 200px;
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  object-fit: cover;
+  aspect-ratio: 592/200;
+}
+.rectangle-2 {
+  background: #ffffff;
+  width: 255px;
+  height: 125px;
+  position: absolute;
+  left: 169px;
+  top: 49px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.celebrating {
+  color: #135715;
+  text-align: center;
+  font-family: "Alexandria-Regular", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  position: absolute;
+  left: 262px;
+  top: 54px;
+}
+._40 {
+  color: #135715;
+  text-align: center;
+  font-family: "Alexandria-Regular", sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  position: absolute;
+  left: 215px;
+  top: 49px;
+  width: 161px;
+  height: 110px;
+}
+.years-1985-2025 {
+  color: #135715;
+  text-align: center;
+  font-family: "Alexandria-Regular", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  position: absolute;
+  left: 270px;
+  top: 147px;
+}
+.image-4 {
+  border-radius: 14px;
+  width: 32px;
+  height: 38px;
+  position: absolute;
+  left: 308px;
+  top: 89px;
+  object-fit: cover;
+  aspect-ratio: 32/38;
+}
+.group-10 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-3 {
+  background: rgba(231, 217, 199, 0.46);
+  border-radius: 50px;
+  width: 97.93px;
+  height: 30.7px;
+  position: absolute;
+  left: 494px;
+  top: 185px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.learn-more {
+  color: #135715;
+  text-align: left;
+  font-family: "Teachers-Bold", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  position: absolute;
+  left: 506.24px;
+  top: 194.99px;
+  width: 72.43px;
+  height: 11.42px;
+}
+
+
+#celebrating button {
+    border: none;
+    color: var(--text-color);
+  background: rgba(231, 217, 199, 0.46);
+  border-radius: 50px;
+  width: 97.93px;
+  height: 30.7px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== Quick Links ====== */
+#quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+#quick-links button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ====== Gallery Section ====== */
+.gallery {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.gallery img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    /* IMAGE PLACEHOLDER - Add gallery images here */
+}
+
+/* ====== Footer ====== */
+footer {
+    margin-top: 2rem;
+    
+}
+
+.main-footer {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+#foot-logo {
+    height: 60px;
+    /* IMAGE PLACEHOLDER - Footer logo */
+}
+
+.foot-links {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.amicis-footer {
+    display: flex;
+    justify-content: space-between; /* Push items to far left & far right */
+    align-items: center; /* Keep them vertically aligned */
+    padding: 0.5rem 1rem;
+    background-color: none; /* Optional: match your footer style */
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.amicis-footer a {
+    color: inherit; /* Keep the same text color */
+    text-decoration: none;
+}
+
+.amicis-footer a:hover {
+    text-decoration: underline; /* Optional hover effect */
+}
+
+
+/* ====== Responsive ====== */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #e8d9c8;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .nav-menu.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    #intro-section {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
