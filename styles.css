@@ -213,29 +213,50 @@ li:hover .dropdwn-content {
 
 /* ====== Celebrating Section ====== */
 
+#celebrating button {
+    border: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    width: 97.93px;
+    height: 30.7px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.398);    
+}
 
+#celebrating button:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
 
-
+#celebrating{
+      background-image: url("images/celebratingBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;    /* or contain / fixed size */
+  background-position: center 35%;   /* show top-left corner */
+  height: 263px;
+}
 
 .frame-5,
 .frame-5 * {
   box-sizing: border-box;
 }
 .frame-5 {
-  background: rgba(231, 217, 199, 0.2);
-  height: 263px;
   position: relative;
   overflow: hidden;
+  display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
 }
-.image-2 {
-  width: 592px;
-  height: 200px;
-  position: absolute;
-  left: 0px;
-  top: 16px;
-  object-fit: cover;
-  aspect-ratio: 592/200;
+
+
+.image-40{
+    margin-top: 1rem;
+    width: 35%;
+    height: auto;
+    z-index: 10;
+    opacity: 0.9;
 }
+
 .rectangle-2 {
   background: #ffffff;
   width: 255px;
@@ -301,6 +322,7 @@ li:hover .dropdwn-content {
   top: 185px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .learn-more {
   color: #135715;
   text-align: left;
@@ -314,18 +336,12 @@ li:hover .dropdwn-content {
   height: 11.42px;
 }
 
-
-#celebrating button {
-    border: none;
-    color: var(--text-color);
-  background: rgba(231, 217, 199, 0.46);
-  border-radius: 50px;
-  width: 97.93px;
-  height: 30.7px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.btn-container{
+        display: flex;
+        justify-content: flex-end; /* pushes content to the right */
+        align-items: center;
+        padding-bottom: .5rem;
+        padding-right: .5rem;
 }
 
 /* ====== Quick Links ====== */
