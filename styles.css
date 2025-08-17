@@ -177,9 +177,8 @@ li:hover .dropdwn-content {
 /* ====== Image Container ====== */
 #intro-image-container {
     flex: 1; /* takes 1/3 of the space */
-    text-align: center;
-    padding-right: 1rem; /* no padding */
-    margin: 0; /* no margin */
+    text-align: center; /* no padding */
+    margin-right: 2rem; /* no margin */
     border: none; /* no border */
 }
 
@@ -384,11 +383,22 @@ footer {
     
 }
 
+footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer img{
+    padding-left: 1rem
+}
+
 .main-footer {
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
     flex-wrap: wrap;
 }
@@ -402,6 +412,8 @@ footer {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
+    padding: 1rem;
+    font-size: 1rem;
 }
 
 .amicis-footer {
@@ -409,8 +421,8 @@ footer {
     justify-content: space-between; /* Push items to far left & far right */
     align-items: center; /* Keep them vertically aligned */
     padding: 0.5rem 1rem;
-    background-color: none; /* Optional: match your footer style */
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     font-size: 0.9rem;
 }
 
