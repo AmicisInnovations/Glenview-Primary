@@ -458,32 +458,43 @@ footer img{
     }
 }
 
+#contact-main h1{
+    padding: 1rem;
+}
+
 /* Main container with flexbox */
 .contact-container {
   display: flex;
   flex-wrap: wrap;   /* makes it responsive */
   gap: 20px;
   align-items: flex-start;
+  margin-left: 1rem;
+  flex-direction: row;
+}
+
+.contact-container .info h3{
+    padding: 0.5rem;
 }
 
 /* Info on the left */
 .contact-container .info {
-  flex: 1 1 300px;
+  width: 50%;
 }
 
-/* Map on the right */
 .contact-container .map {
-  flex: 1 1 500px;
-  min-height: 350px;
+  width: 40%;
+  height: auto;
+  aspect-ratio: 4 / 3;   /* <-- forces square */    /* optional: stops it from getting too wide */
 }
 
 .contact-container .map iframe {
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
 }
+
 
 
 
