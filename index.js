@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const lm1 = document.getElementById("learn1");
-  myButton.addEventListener("click", () => {
+  lm1.addEventListener("click", () => {
     alert("click click");
   });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const lm2 = document.getElementById("learn2");
-  myButton.addEventListener("click", () => {
+  lm2.addEventListener("click", () => {
     alert("click click");
   });
 });
