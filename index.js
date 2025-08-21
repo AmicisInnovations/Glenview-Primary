@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const lm1 = document.getElementById("learn1");
   lm1.addEventListener("click", () => {
-    alert("click click");
+    window.location.href = "ethos.html"
   });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const lm2 = document.getElementById("learn2");
   lm2.addEventListener("click", () => {
-    alert("click click");
+    window.location.href = "celebrate.html"
   });
 });
 
