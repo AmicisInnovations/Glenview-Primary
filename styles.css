@@ -107,7 +107,7 @@ li:hover .dropdwn-content {
     flex-wrap: wrap; /* stack on smaller screens */
     align-items: center;
     justify-content: center;
-    padding: 4rem 0;
+    padding: 2rem;
     gap: 3rem;
     min-height: 80vh;
     width: 100%;
@@ -178,13 +178,11 @@ li:hover .dropdwn-content {
 #intro-image-container {
     flex: 1; /* takes 1/3 of the space */
     text-align: center; /* no padding */
-    margin-right: 2rem; /* no margin */
     border: none; /* no border */
 }
 
 #intro-image-container img {
-    display: block;
-    max-width: 100%; /* fill container width */
+    width: 100%; /* fill container width */
     height: auto; /* maintain aspect ratio */
     object-fit: contain;
 }
@@ -227,13 +225,15 @@ li:hover .dropdwn-content {
     color: var(--primary-color);
 }
 
-#celebrating{
-      background-image: url("images/celebratingBG.jpg");
+#celebrating {
+  background-image: url("images/celebratingBG.jpg");
   background-repeat: no-repeat;
-  background-size: cover;    /* or contain / fixed size */
-  background-position: center 35%;   /* show top-left corner */
-  height: 263px;
+  background-size: cover;
+  background-position: center 35%;
+ aspect-ratio: 1200 / 263;
+    width: 100%;
 }
+
 
 .frame-5,
 .frame-5 * {
@@ -246,15 +246,14 @@ li:hover .dropdwn-content {
     justify-content: center; /* horizontal */
     align-items: center;     /* vertical */
 }
-
-
-.image-40{
-    margin-top: 1rem;
-    width: 35%;
-    height: auto;
-    z-index: 10;
-    opacity: 0.9;
+.image-40 { 
+    margin-top: 1rem; 
+    width: 35%; 
+    height: auto; 
+    z-index: 10; 
+    opacity: 0.9; 
 }
+
 
 .rectangle-2 {
   background: #ffffff;
