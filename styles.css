@@ -4,19 +4,27 @@
     --text-color: #135715;
     --accent-color: #135715;
 }
-
-
-/* ====== General Reset ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body {
     font-family: 'Teachers';
     background-color: var(--background-color);
     color: var(--text-color);
+    height: 100%;
+    display: flex; /*Made this flex so that the footer stays at the bottom when page is on a larger screen*/
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
 }
 
 /* ====== Navigation Bar ====== */
@@ -45,7 +53,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-     justify-content: space-evenly; /* Spread items evenly */
+    justify-content: space-evenly; /* Spread items evenly */
     flex: 1; /* Take up available space */
     gap: 0; /* Remove fixed gap so spacing is even */
 }
@@ -101,6 +109,7 @@ li:hover .dropdwn-content {
     border: none;
     cursor: pointer;
 }
+
 /* ====== Intro Section ====== */
 #intro-section {
     display: flex;
@@ -176,9 +185,9 @@ li:hover .dropdwn-content {
 
 /* ====== Image Container ====== */
 #intro-image-container {
-    flex: 1; /* takes 1/3 of the space */
-    text-align: center; /* no padding */
-    border: none; /* no border */
+    flex: 1; 
+    text-align: center; 
+    border: none; 
 }
 
 #intro-image-container img {
@@ -230,7 +239,7 @@ li:hover .dropdwn-content {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 35%;
- aspect-ratio: 1200 / 263;
+ aspect-ratio: 1200 / 263; /*Need to update this for smaller screens, can't read text*/
     width: 100%;
 }
 
@@ -239,6 +248,7 @@ li:hover .dropdwn-content {
 .frame-5 * {
   box-sizing: border-box;
 }
+
 .frame-5 {
   position: relative;
   overflow: hidden;
@@ -252,73 +262,6 @@ li:hover .dropdwn-content {
     height: auto; 
     z-index: 10; 
     opacity: 0.9; 
-}
-
-
-.rectangle-2 {
-  background: #ffffff;
-  width: 255px;
-  height: 125px;
-  position: absolute;
-  left: 169px;
-  top: 49px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.celebrating {
-  color: #135715;
-  text-align: center;
-  font-family: "Alexandria-Regular", sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  position: absolute;
-  left: 262px;
-  top: 54px;
-}
-._40 {
-  color: #135715;
-  text-align: center;
-  font-family: "Alexandria-Regular", sans-serif;
-  font-size: 96px;
-  font-weight: 400;
-  position: absolute;
-  left: 215px;
-  top: 49px;
-  width: 161px;
-  height: 110px;
-}
-.years-1985-2025 {
-  color: #135715;
-  text-align: center;
-  font-family: "Alexandria-Regular", sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  position: absolute;
-  left: 270px;
-  top: 147px;
-}
-.image-4 {
-  border-radius: 14px;
-  width: 32px;
-  height: 38px;
-  position: absolute;
-  left: 308px;
-  top: 89px;
-  object-fit: cover;
-  aspect-ratio: 32/38;
-}
-.group-10 {
-  position: absolute;
-  inset: 0;
-}
-.rectangle-3 {
-  background: rgba(231, 217, 199, 0.46);
-  border-radius: 50px;
-  width: 97.93px;
-  height: 30.7px;
-  position: absolute;
-  left: 494px;
-  top: 185px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .learn-more {
@@ -404,7 +347,6 @@ footer img{
 
 #foot-logo {
     height: 60px;
-    /* IMAGE PLACEHOLDER - Footer logo */
 }
 
 .foot-links {
