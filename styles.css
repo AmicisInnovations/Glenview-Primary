@@ -345,22 +345,44 @@ li:hover .dropdwn-content {
 
 /* ====== Quick Links ====== */
 #quick-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  margin:60px 0;
 }
 
-#quick-links button {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+.Qlinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);   
+  gap: 100px; 
+  padding: 50px;
+  background-color: var(--primary-color); 
+  border: 2px solid var(--accent-color);   
+  border-radius: 12px;      
+  min-width: 200vh;             
+  height: fit-content;           
+  box-shadow: 0 4px 8px var(--accent-color); 
 }
+
+.Qlinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--accent-color); /* link background */
+  color: white;
+  font-weight: bold;
+  font-family: 'Teachers';
+  border-radius: 8px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.Qlinks a:hover {
+  background-color: #13571553;
+  color: var(--text-color);
+}
+
 
 /* ====== Gallery Section ====== */
 .gallery {
@@ -376,6 +398,12 @@ li:hover .dropdwn-content {
     border-radius: 8px;
     /* IMAGE PLACEHOLDER - Add gallery images here */
 }
+
+
+
+
+
+
 
 /* ====== Footer ====== */
 footer {
@@ -434,6 +462,7 @@ footer img{
 .amicis-footer a:hover {
     text-decoration: underline; /* Optional hover effect */
 }
+
 
 
 /* ====== Responsive ====== */
