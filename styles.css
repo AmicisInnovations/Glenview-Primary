@@ -286,24 +286,35 @@ li:hover .dropdwn-content {
 }
 
 /* ====== Quick Links ====== */
+
+
+
 #quick-links {
+    flex-direction: column;
   display: flex;
   justify-content: center;
-  margin:60px 0;
+  margin:60px 0px;
+  align-items: center;
+}
+#quick-links h2 {
+    font-family: 'Teachers';
+    font-size: 2rem;
+    color: var(--accent-color);
+    padding-bottom: 20px;
 }
 
 .Qlinks {
+align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(2, 1fr);   
-  gap: 100px; 
-  padding: 50px;
-  background-color: var(--primary-color); 
-  border: 2px solid var(--accent-color);   
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+  gap: 50px; 
+  padding: 30px;
+  background-color: var(--primary-color);   
   border-radius: 12px;      
-  min-width: 200vh;             
+  width: 90%;       
   height: fit-content;           
-  box-shadow: 0 4px 8px var(--accent-color); 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.363); 
+
 }
 
 .Qlinks a {
@@ -318,6 +329,7 @@ li:hover .dropdwn-content {
   border-radius: 8px;
   padding: 10px;
   transition: background 0.3s;
+  height: 100px;
 }
 
 .Qlinks a:hover {
