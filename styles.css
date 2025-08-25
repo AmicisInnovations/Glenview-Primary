@@ -139,7 +139,7 @@ li:hover .dropdwn-content {
     transform: translate(-50%, -50%);
     width: 400px;
     height: 400px;
-    background: url('/images/intrologo.png') no-repeat center center;
+    background: url('images/intrologo.png') no-repeat center center;
     background-size: contain;
     opacity: 0.2;
     z-index: 0;
