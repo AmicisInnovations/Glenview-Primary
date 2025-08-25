@@ -18,3 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "index.html";
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const navLogo = document.getElementById("foot-logo");
+  navLogo.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+});
