@@ -10,7 +10,7 @@
 
       let { data, error } = await client.storage
         .from(BUCKET_NAME)
-        .list("", { limit: 100 });
+        .list("gallery", { limit: 100 });
 
       if (error) {
         console.error(error);
