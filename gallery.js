@@ -19,9 +19,10 @@
       }
 
       for (const file of data) {
+        const filePath = `gallery/${file.name}`;
         const { data: urlData } = client.storage
           .from(BUCKET_NAME)
-          .getPublicUrl(file.name);
+          .getPublicUrl(filePath);
 
         if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)) {
           const img = document.createElement("img");
