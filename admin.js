@@ -2,7 +2,6 @@
     const SUPABASE_URL = "https://mzqrbmosncwhwqwiilxk.supabase.co";
     const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16cXJibW9zbmN3aHdxd2lpbHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUxNjAyMTYsImV4cCI6MjA3MDczNjIxNn0.PmGBlwbyuhe7CrjSmYh7zEbMzWfnLX_CN_-Zm5x3qPg";
     const BUCKET_NAME = "uploads";
-    const folder = document.getElementById("resources").value;
 
     // Correct initialization
     const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -34,6 +33,7 @@
     });
 
     document.getElementById("uploadBtn-Resources").addEventListener("click", async () => {
+      const folder = document.getElementById("resources").value;
       const file = document.getElementById("fileInput-Resources").files[0];
       if (!file) {
         status.textContent = "Please select a file first.";
