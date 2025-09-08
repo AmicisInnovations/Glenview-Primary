@@ -34,7 +34,7 @@
     });
 
     document.getElementById("uploadBtn-Resources").addEventListener("click", async () => {
-      const file = document.getElementById("fileInput").files[0];
+      const file = document.getElementById("fileInput-Resources").files[0];
       if (!file) {
         status.textContent = "Please select a file first.";
         return;
