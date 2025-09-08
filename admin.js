@@ -18,8 +18,7 @@
         return;
       }
 
-      const filePath = `${Date.now()}-${file.name}`;
-
+      const filePath = `gallery/${Date.now()}-${file.name}`
       let { data, error } = await client.storage
         .from(BUCKET_NAME)
         .upload(filePath, file);
