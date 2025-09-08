@@ -11,7 +11,7 @@
     const fileList = document.getElementById("fileList");
 
     // Upload handler
-    document.getElementById("uploadBtn").addEventListener("click", async () => {
+    document.getElementById("uploadBtn-Gallery").addEventListener("click", async () => {
       const file = document.getElementById("fileInput").files[0];
       if (!file) {
         status.textContent = "Please select a file first.";

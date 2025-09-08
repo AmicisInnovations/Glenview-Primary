@@ -48,6 +48,10 @@ main{
     /* IMAGE PLACEHOLDER - Add school logo here */
 }
 
+#nav-logo:hover{
+    cursor: pointer;
+}
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -394,6 +398,10 @@ footer img{
     height: 60px;
 }
 
+#foot-logo:hover{
+    cursor: pointer;
+}
+
 .foot-links {
     text-decoration: none;
     color: var(--text-color);
@@ -486,5 +494,73 @@ footer img{
     text-decoration: none;
 }
 
+/* ==== Admin Dashboard ==== */
+.main-container-admin{
+    padding: 1rem;
+}
+
+.main-container-admin button{
+      background: #135715;
+  color: var(--primary-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#admin-gallery{
+    padding: 0.5rem;
+}
+
+#admin-gallery h2{
+    padding: 0.5rem;
+}
+
+#admin-gallery p{
+    padding-bottom: 0.5rem;
+}
+
+#admin-resources{
+    padding: 0.5rem;
+}
+
+#admin-resources h2{
+    padding: 0.5rem;
+}
+
+#admin-resources p{
+    padding-bottom: 0.5rem;
+}
+
+select {
+  padding: 6px 36px 6px 10px;   /* extra right padding for the arrow */
+  border: 2px solid #135715;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: #135715;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 2px solid #135715;
+  border-radius: 8px;
+  background: var(--primary-color);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button{
+  background: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  color: var(--primary-color);
+  padding: 0.4rem;
+}
 
 
