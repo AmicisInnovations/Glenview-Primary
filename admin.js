@@ -32,6 +32,27 @@
       }
     });
 
+    document.getElementById("uploadBtn-Resources").addEventListener("click", async () => {
+      const file = document.getElementById("fileInput").files[0];
+      if (!file) {
+        status.textContent = "Please select a file first.";
+        return;
+  }
+
+      const filePath = `resources/${Date.now()}-${file.name}`;
+      let { data, error } = await client.storage
+        .from(BUCKET_NAME)
+        .upload(filePath, file);
+
+      if (error) {
+        console.error(error);
+        status.textContent = "Upload failed: " + error.message;
+      } else {
+        status.textContent = "Uploaded to resources: " + filePath;
+        loadFiles(); 
+  }
+});
+
     // Fetch all files from bucket
     async function loadFiles() {
       fileList.innerHTML = "";
