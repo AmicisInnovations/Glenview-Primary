@@ -87,3 +87,15 @@
 
     // Load files on page load
     loadFiles();
+
+      const modal = document.querySelector(".modal-event");
+    const openBtn = document.getElementById("create-event");
+    const closeBtn = document.querySelector(".close-btn");
+
+    openBtn.addEventListener("click", () => {
+      modal.showModal();  // show the dialog
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.close();  // close the dialog
+    });

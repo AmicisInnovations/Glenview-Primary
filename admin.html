@@ -52,6 +52,40 @@
   <h3>Files in Resources</h3>
   <ul id="fileList"></ul>
   </section>
+  <section>
+    <h2>Events</h2>
+    <button id="create-event">Create Event</button>
+      <dialog class="modal-event">
+    <button class="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h1>Create an event</h1>
+    <section class="event-content">
+      <label for="Name">Event Name:</label>
+      <input type="text" id="eventName" name="event-name" required>
+
+      <label for="Description">Event Description:</label>
+      <textarea id="desc"></textarea>        
+
+      <label for="Date">Date:</label>
+      <input type="date" id="eventDate" name="event-date" required min="">
+
+      <label for="start">Start Time:</label>
+      <input type="time" id="start" name="start" min="08:00" max="20:00" required>
+
+      <label for="end">End Time:</label>
+      <input type="time" id="end" name="end" required>
+
+    <label for="price">Event Price:</label>
+    <input type="number" id="price" name="price" min="0" step="0.01" placeholder="Enter price">
+
+    <section class="btn-container1">
+      <button id="event-btn">CREATE EVENT</button>
+    </section>
+  </dialog>
+
+    <h3>Upcoming Events:</h3>
+  </section>
   <!-- Supabase client -->
   <script src="https://unpkg.com/@supabase/supabase-js"></script>
   <script src="admin.js"></script>
