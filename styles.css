@@ -564,3 +564,180 @@ input[type="file"]::file-selector-button{
 }
 
 
+.About-us {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.About-us img {
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+}
+
+.About-us::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.47); /* Adjust opacity for desired tint */
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.About-us h1 {
+    position: absolute;
+    align-content: center;
+    left: 550px;          
+    top: 50px;         
+    color: #fff;          
+    font-size: 3rem;      
+    font-family: 'Teachers', sans-serif;
+    z-index: 2;           
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Optional: add shadow for readability */
+    margin: 0;
+}
+
+
+
+ .main-container{
+    background: rgba(2, 84, 45, 0.68);
+  width: 100vw;
+  height: 90vh;
+ 
+ }
+#choose-glenview,
+#glenview-lion {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    margin: 40px 0;
+}
+
+.text-container-green {
+    color: #fff;
+    border-radius: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Teachers', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+  
+}
+
+.text-container-green h2 {
+        font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    text-align: center;       /* Center heading */
+    width: 70%;              /* Full width for centering */
+
+}
+
+.text-container-green p {
+  
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-bottom: 1rem;      /* Space below paragraph */
+    text-align: center;       /* Center paragraph */
+    width: 70%;              /* Full width for centering */
+    height: auto; 
+}
+
+.img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 80%;
+    max-width: 320px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(19,87,21,0.10);
+}
+
+/* Vision, Mission, Values Section */
+#vis-mis-val {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    margin: 40px 0;
+}
+
+.text-container-beige {
+    background: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    flex: 1;
+    font-family: 'Teachers', sans-serif;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 16px rgba(19,87,21,0.08);
+}
+
+.text-container-beige h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.text-container-beige h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-container-beige p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+#vis-mis-val .img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vis-mis-val .img-container img {
+    width: 80%;
+    max-width: 320px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    object-fit: cover;
+    background: #e7d9c7;
+    box-shadow: 0 4px 16px rgba(19,87,21,0.10);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    #choose-glenview,
+    #vis-mis-val,
+    #glenview-lion {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .img-container img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ...existing code... */
