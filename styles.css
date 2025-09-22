@@ -954,6 +954,25 @@ textarea {
 
 .main-container-resources h2{
     margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+#exam-timetable{
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#stationery-list{
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#what-to-learn{
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ==== NEWS PAGE =====*/
@@ -990,4 +1009,9 @@ textarea {
 
 .main-container-news h2{
     margin-left: 1rem;
+}
+
+#newsletter{
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
