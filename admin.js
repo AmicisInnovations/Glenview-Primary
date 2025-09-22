@@ -243,6 +243,48 @@ async function loadResourceFiles() {
   }
 }
 
+// Grab modal elements
+const createEventBtn = document.getElementById("create-event");
+const modal = document.querySelector(".modal-event");
+const closeBtn = modal.querySelector(".close-btn");
+
+// Open modal on button click
+createEventBtn.addEventListener("click", () => {
+  modal.showModal(); // <dialog> method to open modal
+});
+
+// Close modal on X button click
+closeBtn.addEventListener("click", () => {
+  modal.close();
+});
+
+// Optional: close modal when clicking outside modal content
+modal.addEventListener("click", (e) => {
+  const rect = modal.getBoundingClientRect();
+  const isInDialog = (
+    e.clientX >= rect.left &&
+    e.clientX <= rect.right &&
+    e.clientY >= rect.top &&
+    e.clientY <= rect.bottom
+  );
+  if (!isInDialog) modal.close();
+});
+
+// Handle CREATE EVENT button inside modal
+document.getElementById("event-btn").addEventListener("click", () => {
+  const name = document.getElementById("eventName").value;
+  const desc = document.getElementById("desc").value;
+  const date = document.getElementById("eventDate").value;
+  const start = document.getElementById("start").value;
+  const end = document.getElementById("end").value;
+  const price = document.getElementById("price").value;
+
+  // TODO: validate fields and save event to database
+
+  console.log({ name, desc, date, start, end, price });
+  modal.close(); // close after submission
+});
+
 
 // Load both on page load
 loadGalleryFiles();
