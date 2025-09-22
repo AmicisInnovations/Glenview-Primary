@@ -133,6 +133,117 @@ async function loadResourceFiles() {
   }
 }
 
+async function deleteFile(path, refreshFn) {
+  if (!confirm(`Are you sure you want to delete ${path}?`)) return;
+
+  const { data, error } = await client.storage
+    .from(BUCKET_NAME)
+    .remove([path]);
+
+  if (error) {
+    console.error("Delete failed:", error);
+    alert("Failed to delete file: " + error.message);
+  } else {
+    alert("Deleted: " + path);
+    refreshFn(); // reload list
+  }
+}
+
+async function loadGalleryFiles() {
+  const galleryFileList = document.getElementById("fileListGal");
+  galleryFileList.innerHTML = "";
+
+  let { data, error } = await client.storage
+    .from(BUCKET_NAME)
+    .list("gallery", { limit: 100 });
+
+  if (error) {
+    console.error(error);
+    galleryFileList.innerHTML = "<li>Error loading files</li>";
+    return;
+  }
+
+  for (const file of data) {
+    const path = `gallery/${file.name}`;
+    const { data: urlData } = client.storage
+      .from(BUCKET_NAME)
+      .getPublicUrl(path);
+
+    const li = document.createElement("li");
+
+    // File link
+    const link = document.createElement("a");
+    link.href = urlData.publicUrl;
+    link.textContent = file.name;
+    link.target = "_blank";
+
+    // Delete button
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    delBtn.classList.add("deleteBtn");
+    delBtn.addEventListener("click", () => deleteFile(path, loadGalleryFiles));
+
+    li.appendChild(link);
+    li.appendChild(delBtn);
+    galleryFileList.appendChild(li);
+  }
+}
+
+async function loadResourceFiles() {
+  const resourcesFileList = document.getElementById("fileList");
+  resourcesFileList.innerHTML = "";
+
+  const folders = ["newsletter", "exam-timetable", "what-to-learn", "stationary-list"];
+
+  for (const folder of folders) {
+    let { data, error } = await client.storage
+      .from(BUCKET_NAME)
+      .list(folder, { limit: 100 });
+
+    if (error) {
+      console.error(error);
+      resourcesFileList.innerHTML += `<li>Error loading ${folder}</li>`;
+      continue;
+    }
+
+    if (data.length > 0) {
+      const folderLi = document.createElement("li");
+      folderLi.textContent = folder + ":";
+
+      const subList = document.createElement("ul");
+
+      for (const file of data) {
+        const path = `${folder}/${file.name}`;
+        const { data: urlData } = client.storage
+          .from(BUCKET_NAME)
+          .getPublicUrl(path);
+
+        const li = document.createElement("li");
+
+        // File link
+        const link = document.createElement("a");
+        link.href = urlData.publicUrl;
+        link.textContent = file.name;
+        link.target = "_blank";
+
+        // Delete button
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.classList.add("deleteBtn");
+        delBtn.addEventListener("click", () => deleteFile(path, loadResourceFiles));
+
+        li.appendChild(link);
+        li.appendChild(delBtn);
+        subList.appendChild(li);
+      }
+
+      folderLi.appendChild(subList);
+      resourcesFileList.appendChild(folderLi);
+    }
+  }
+}
+
+
 // Load both on page load
 loadGalleryFiles();
 loadResourceFiles();
