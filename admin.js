@@ -235,6 +235,7 @@ async function loadResourceFiles() {
         li.appendChild(link);
         li.appendChild(delBtn);
         subList.appendChild(li);
+        subList.classList.add("subList");
       }
 
       folderLi.appendChild(subList);
