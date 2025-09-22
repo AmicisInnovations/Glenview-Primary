@@ -89,7 +89,7 @@ async function loadGalleryFiles() {
 
 // Load Resource Files
 async function loadResourceFiles() {
-  const resourcesFileList = document.getElementById("filelist");
+  const resourcesFileList = document.getElementById("fileList");
   resourcesFileList.innerHTML = "";
 
   // list top-level resource folders
