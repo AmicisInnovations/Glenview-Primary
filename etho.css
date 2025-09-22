@@ -1,0 +1,194 @@
+body{
+    overflow-x: hidden;
+}
+
+.AboutUs {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.AboutUs img {
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+}
+
+.AboutUs::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.47); /* Adjust opacity for desired tint */
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.AboutUs h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    z-index: 1;
+
+}
+
+
+
+
+
+.why-glen {
+  display: flex;
+  align-items: center;          /* vertically center content */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
+}
+
+.why-glen h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #02542D;               /* optional accent */
+}
+
+.why-glen p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: #444;
+}
+
+.why-glen img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;           /* optional styling */
+}
+
+
+
+
+
+.mission_val {
+  display: flex;
+  align-items: center;       /* vertically centers text with the image */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;                 /* space between image and text */
+  padding: 40px;
+}
+
+.mission_val .imgcontainer img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;        /* optional styling */
+}
+
+.text-container-beige {
+  flex: 1;                   /* take remaining space */
+}
+
+.text-container-beige h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #02542D;            /* optional */
+  text-align: left;
+}
+
+.text-container-beige .vision-mission {
+  display: flex;
+  gap: 40px;                 /* spacing between Vision and Mission blocks */
+}
+
+.text-container-beige .vision-mission section {
+  flex: 1;                   /* each block takes equal width */
+}
+
+.text-container-beige h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.text-container-beige p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+
+
+
+.lion {
+  display: flex;
+  align-items: center;       /* vertically centers text next to the image */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;                 /* space between text and image */
+  padding: 40px;
+}
+
+.lion h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #02542D;            /* optional */
+}
+
+.lion p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: #444;
+}
+
+.lion img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;        /* optional rounded corners */
+}
+
+
+
+
+
+.song {
+  display: flex;
+  align-items: center;         /* vertically align image and text */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
+}
+
+.song .img-container img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;          /* optional */
+}
+
+.song .text-container-beige {
+  flex: 1;                     /* text takes remaining space */
+}
+
+.song h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #02542D;              /* optional */
+}
+
+.song p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: #444;
+}

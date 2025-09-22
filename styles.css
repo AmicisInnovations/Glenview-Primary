@@ -563,181 +563,211 @@ input[type="file"]::file-selector-button{
   padding: 0.4rem;
 }
 
+body{
+    overflow-x: hidden;
+}
 
-.About-us {
+.AboutUs {
     position: relative;
     width: 100vw;
     height: 30vh;
-    overflow: hidden;
 }
 
-.About-us img {
+.AboutUs img {
     width: 100vw;
     height: 30vh;
     object-fit: cover;
     display: block;
 }
 
-.About-us::after {
+.AboutUs::after {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.47); /* Adjust opacity for desired tint */
+    background: rgba(2, 84, 44, 0.295); /* Adjust opacity for desired tint */
     pointer-events: none; /* Allows clicks to pass through */
 }
 
-.About-us h1 {
+.AboutUs h1{
     position: absolute;
-    align-content: center;
-    left: 550px;          
-    top: 50px;         
-    color: #fff;          
-    font-size: 3rem;      
-    font-family: 'Teachers', sans-serif;
-    z-index: 2;           
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Optional: add shadow for readability */
-    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    z-index: 1;
+
 }
 
 
 
- .main-container{
-    background: rgba(2, 84, 45, 0.68);
+
+
+.why-glen {
+  background-color: #02542c;
+  display: flex;
+  align-items: center;          /* vertically center content */
+  justify-content: space-between;
   width: 100vw;
-  height: 90vh;
- 
- }
-#choose-glenview,
-#glenview-lion {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    gap: 2rem;
-    margin: 40px 0;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
 }
 
-.text-container-green {
-    color: #fff;
-    border-radius: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Teachers', sans-serif;
-    font-size: 1.2rem;
-    text-align: center;
-  
+.why-glen h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color); 
+  font-family: 'Teachers';              /* optional accent */
 }
 
-.text-container-green h2 {
-        font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    color: var(--primary-color);
-    text-align: center;       /* Center heading */
-    width: 70%;              /* Full width for centering */
-
+.why-glen p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: var(--primary-color);
+  font-family: 'Teachers';
+font-style: italic;
+font-weight: 'semi-bold';
 }
 
-.text-container-green p {
-  
-    font-style: italic;
-    font-size: 1.1rem;
-    margin: 0;
-    margin-bottom: 1rem;      /* Space below paragraph */
-    text-align: center;       /* Center paragraph */
-    width: 70%;              /* Full width for centering */
-    height: auto; 
+.why-glen img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;          
 }
 
-.img-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+.mission_val {
+  display: flex;
+  align-items: center;       /* vertically centers text with the image */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;                 /* space between image and text */
+  padding: 40px;
 }
 
-.img-container img {
-    width: 80%;
-    max-width: 320px;
-    aspect-ratio: 1/1;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0 4px 16px rgba(19,87,21,0.10);
-}
-
-/* Vision, Mission, Values Section */
-#vis-mis-val {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    gap: 2rem;
-    margin: 40px 0;
+.mission_val .imgcontainer img {
+   max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;       
 }
 
 .text-container-beige {
-    background: var(--primary-color);
-    color: var(--text-color);
-    border-radius: 20px;
-    padding: 2rem 1.5rem;
-    flex: 1;
-    font-family: 'Teachers', sans-serif;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 16px rgba(19,87,21,0.08);
+  flex: 1;                   /* take remaining space */
 }
 
 .text-container-beige h2 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-    letter-spacing: 1px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #02542D;            /* optional */
+  text-align: center;
+  font-family: 'Teachers';
+}
+
+.text-container-beige .vision-mission {
+  display: flex;
+  gap: 40px;                 /* spacing between Vision and Mission blocks */
+}
+
+.text-container-beige .vision-mission section {
+  flex: 1;                   /* each block takes equal width */
 }
 
 .text-container-beige h3 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #02542D;
+    font-family: 'Teachers';
 }
 
 .text-container-beige p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #000000;
+    font-family: 'Teachers';
 }
 
-#vis-mis-val .img-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+
+.lion {
+  background-color: #02542D;
+  display: flex;
+  align-items: center;       /* vertically centers text next to the image */
+  justify-content: space-between;
+  max-width: 100vw;
+  margin: 0 auto;
+  gap: 40px;                 /* space between text and image */
+  padding: 40px;
 }
 
-#vis-mis-val .img-container img {
-    width: 80%;
-    max-width: 320px;
-    aspect-ratio: 1/1;
-    border-radius: 20px;
-    object-fit: cover;
-    background: #e7d9c7;
-    box-shadow: 0 4px 16px rgba(19,87,21,0.10);
+.lion h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color); 
+  font-family: 'Teachers';           /* optional */
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-    #choose-glenview,
-    #vis-mis-val,
-    #glenview-lion {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .img-container img {
-        width: 100%;
-        max-width: 100%;
-    }
+.lion p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: var(--primary-color);
+    font-family: 'Teachers';
+    font-style: italic;
 }
 
-/* ...existing code... */
+.lion img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;       
+}
+
+
+
+
+
+.song {
+  display: flex;
+  align-items: center;         /* vertically align image and text */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
+}
+
+.song .img-container img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;          /* optional */
+}
+
+.song .text-container-beige {
+  flex: 1;                     /* text takes remaining space */
+}
+
+.song h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #02542D;     
+  font-family: 'Teachers';         /* optional */
+}
+
+.song p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: black;
+  font-family: 'Teachers';
+}
