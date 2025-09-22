@@ -600,9 +600,6 @@ body{
 }
 
 
-
-
-
 .why-glen {
   background-color: #02542c;
   display: flex;
@@ -921,4 +918,76 @@ textarea {
   justify-content: space-between; /* puts file name left, button right */
   align-items: center;
   padding: 0.2rem 0;
+}
+
+/* ==== RESOURCES PAGE =====*/
+.Resources {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+}
+
+.Resources img {
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+}
+
+.Resources::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(2, 84, 44, 0.295); /* Adjust opacity for desired tint */
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.Resources h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+.main-container-resources h2{
+    margin-left: 1rem;
+}
+
+/* ==== NEWS PAGE =====*/
+.Newsletters {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+}
+
+.Newsletters img {
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+}
+
+.Newsletters::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(2, 84, 44, 0.295); /* Adjust opacity for desired tint */
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.Newsletters h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+.main-container-news h2{
+    margin-left: 1rem;
 }

@@ -193,7 +193,7 @@ async function loadResourceFiles() {
   const resourcesFileList = document.getElementById("fileList");
   resourcesFileList.innerHTML = "";
 
-  const folders = ["newsletter", "exam-timetable", "what-to-learn", "stationary-list"];
+  const folders = ["newsletter", "exam-timetable", "what-to-learn", "stationery-list"];
 
   for (const folder of folders) {
     let { data, error } = await client.storage
