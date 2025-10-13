@@ -77,6 +77,8 @@ main{
     font-weight: bold;
 }
 
+
+
 .dropdwn-content {
     font-family:'Teachers';
     display: none;
@@ -1038,4 +1040,71 @@ textarea {
 .video-container iframe{
   width: 80%;
   height: 80%
+}
+
+/* ======= Academics ======= */
+.phase-green {
+  background-color: #02542c;
+  display: flex;
+  align-items: center;          /* vertically center content */
+  justify-content: space-between;
+  width: 100vw;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
+}
+.phase-beige {
+  background-color: #E7D9C7;
+  display: flex;
+  align-items: center;          /* vertically center content */
+  justify-content: space-between;
+  width: 100vw;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
+}
+
+.phase-green h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color); 
+  font-family: 'Teachers';              /* optional accent */
+}
+
+.phase-green p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: var(--primary-color);
+  font-family: 'Teachers';
+font-style: italic;
+font-weight: 'semi-bold';
+}
+
+.phase-green img {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;          
+}
+.phase-beige h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color); 
+  font-family: 'Teachers';   
+}
+
+.phase-beige p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: var(--text-color);
+  font-family: 'Teachers';
+font-style: italic;
+font-weight: 'semi-bold';
+}
+
+.phase-beige img {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;          
 }
