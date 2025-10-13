@@ -307,6 +307,7 @@ eventSubmitBtn.addEventListener('click', async (e) => {
   e.preventDefault(); // Prevent default button behavior
 
   // Collect data from inputs
+  const event_name = document.getElementById('eventName').value;
   const description = document.getElementById('desc').value;
   const date = document.getElementById('eventDate').value;
   const startTime = document.getElementById('start').value;
@@ -316,7 +317,7 @@ eventSubmitBtn.addEventListener('click', async (e) => {
   const status = 'pending'; // default status
 
   // Insert into Supabase
-  const { error, data } = await supabase
+  const { error, data } = await client
     .from('events')
     .insert([
       {
@@ -324,19 +325,23 @@ eventSubmitBtn.addEventListener('click', async (e) => {
         date,
         time: startTime,
         cost,
-        status
+        status,
+        event_name
       }
     ]);
 
-  if (error) {
-    console.error('Error adding event:', error);
-    alert('Failed to add event.');
-  } else {
+ if (error) {
+  console.error("Error adding event:", error.message, error);
+  alert("Failed to add event: " + error.message);
+}
+
+  else {
     console.log('Event added successfully:', data);
     alert('Event created successfully!');
     modal.close();
     
     // Optionally clear form
+    document.getElementById('eventName').value='';
     document.getElementById('desc').value = '';
     document.getElementById('eventDate').value = '';
     document.getElementById('start').value = '';
