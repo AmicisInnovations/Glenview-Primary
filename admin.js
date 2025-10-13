@@ -290,69 +290,57 @@ document.getElementById("event-btn").addEventListener("click", () => {
 // Load both on page load
 loadGalleryFiles();
 loadResourceFiles();
+const eventSubmitBtn = document.getElementById('event-btn');
 
-const ADMIN_EMAIL = "jldharold@gmail.com";
+// Open dialog when "Create Event" button is clicked
+createEventBtn.addEventListener('click', () => {
+  modal.showModal();
+});
 
-document.addEventListener("DOMContentLoaded", () => {
-  // --- Supabase setup (already done elsewhere as "client") ---
-  // const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-  // const ADMIN_EMAIL = "admin@example.com";
+// Close dialog
+closeBtn.addEventListener('click', () => {
+  modal.close();
+});
 
-  // --- DOM elements ---
-  const popup = document.getElementById("loginPopup");
-  const form = document.getElementById("loginForm");
-  const errorMsg = document.getElementById("error");
-  const welcome = document.getElementById("welcome");
-  const logoutBtn = document.getElementById("logout");
+// Handle form submission
+eventSubmitBtn.addEventListener('click', async (e) => {
+  e.preventDefault(); // Prevent default button behavior
 
-  // --- Check if user already logged in ---
-  async function checkLogin() {
-    const { data } = await client.auth.getSession();
+  // Collect data from inputs
+  const description = document.getElementById('desc').value;
+  const date = document.getElementById('eventDate').value;
+  const startTime = document.getElementById('start').value;
+  const endTime = document.getElementById('end').value; // optional if you want
+  const costInput = document.getElementById('price').value;
+  const cost = parseInt(costInput, 10) || 0;
+  const status = 'pending'; // default status
 
-    if (!data.session || data.session.user.email !== ADMIN_EMAIL) {
-      // Show dialog as modal
-      if (!popup.open) popup.showModal();
-    } else {
-      showAdminPage();
-    }
+  // Insert into Supabase
+  const { error, data } = await supabase
+    .from('events')
+    .insert([
+      {
+        description,
+        date,
+        time: startTime,
+        cost,
+        status
+      }
+    ]);
+
+  if (error) {
+    console.error('Error adding event:', error);
+    alert('Failed to add event.');
+  } else {
+    console.log('Event added successfully:', data);
+    alert('Event created successfully!');
+    modal.close();
+    
+    // Optionally clear form
+    document.getElementById('desc').value = '';
+    document.getElementById('eventDate').value = '';
+    document.getElementById('start').value = '';
+    document.getElementById('end').value = '';
+    document.getElementById('price').value = '';
   }
-
-  // --- Handle login form submission ---
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    if (email !== ADMIN_EMAIL) {
-      errorMsg.textContent = "Access denied. Not an admin account.";
-      return;
-    }
-
-    const { data, error } = await client.auth.signInWithPassword({ email, password });
-
-    if (error) {
-      errorMsg.textContent = "Invalid email or password.";
-    } else {
-      popup.close();
-      showAdminPage();
-    }
-  });
-
-  // --- Show admin content ---
-  function showAdminPage() {
-    popup.close();
-    if (welcome) welcome.style.display = "block";
-    if (logoutBtn) logoutBtn.style.display = "inline-block";
-  }
-
-  // --- Logout ---
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", async () => {
-      await client.auth.signOut();
-      location.reload();
-    });
-  }
-
-  // --- Run on page load ---
-  checkLogin();
 });
