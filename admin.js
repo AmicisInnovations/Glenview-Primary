@@ -1,4 +1,4 @@
-    // Replace with your Supabase credentials
+// Replace with your Supabase credentials
     const SUPABASE_URL = "https://mzqrbmosncwhwqwiilxk.supabase.co";
     const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16cXJibW9zbmN3aHdxd2lpbHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUxNjAyMTYsImV4cCI6MjA3MDczNjIxNn0.PmGBlwbyuhe7CrjSmYh7zEbMzWfnLX_CN_-Zm5x3qPg";
     const BUCKET_NAME = "uploads";
@@ -291,3 +291,68 @@ document.getElementById("event-btn").addEventListener("click", () => {
 loadGalleryFiles();
 loadResourceFiles();
 
+const ADMIN_EMAIL = "jldharold@gmail.com";
+
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Supabase setup (already done elsewhere as "client") ---
+  // const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  // const ADMIN_EMAIL = "admin@example.com";
+
+  // --- DOM elements ---
+  const popup = document.getElementById("loginPopup");
+  const form = document.getElementById("loginForm");
+  const errorMsg = document.getElementById("error");
+  const welcome = document.getElementById("welcome");
+  const logoutBtn = document.getElementById("logout");
+
+  // --- Check if user already logged in ---
+  async function checkLogin() {
+    const { data } = await client.auth.getSession();
+
+    if (!data.session || data.session.user.email !== ADMIN_EMAIL) {
+      // Show dialog as modal
+      if (!popup.open) popup.showModal();
+    } else {
+      showAdminPage();
+    }
+  }
+
+  // --- Handle login form submission ---
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (email !== ADMIN_EMAIL) {
+      errorMsg.textContent = "Access denied. Not an admin account.";
+      return;
+    }
+
+    const { data, error } = await client.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      errorMsg.textContent = "Invalid email or password.";
+    } else {
+      popup.close();
+      showAdminPage();
+    }
+  });
+
+  // --- Show admin content ---
+  function showAdminPage() {
+    popup.close();
+    if (welcome) welcome.style.display = "block";
+    if (logoutBtn) logoutBtn.style.display = "inline-block";
+  }
+
+  // --- Logout ---
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", async () => {
+      await client.auth.signOut();
+      location.reload();
+    });
+  }
+
+  // --- Run on page load ---
+  checkLogin();
+});
