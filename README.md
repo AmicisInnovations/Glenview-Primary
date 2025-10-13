@@ -24,7 +24,7 @@ The purpose of this website is to provide an informative, accessible, and engagi
 ## 👥 Dev Team
 - Jayden Harold: Lead Developer and Scrum Master
 - Dylan Naidoo: Technical Lead: Data Systems
-- Zaneerah Essop: UI/UX Designer
+- Tariro Muvevi: UI/UX Designer
 - Karabelo Borotho: Support Engineer and Developer
 
 >For any queries concerning this repository, please contact **Jayden Harold**, jayden.harold@amicisinnovations.co.za. <br>
