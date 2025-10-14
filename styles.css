@@ -689,7 +689,7 @@ font-weight: 'semi-bold';
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
-  color: #000000;
+  color: #02542D;
     font-family: 'Teachers';
 }
 
@@ -1109,6 +1109,7 @@ font-weight: 'semi-bold';
   border-radius: 8px;          
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
     .phase-beige{
       flex-direction: column;
@@ -1125,4 +1126,15 @@ font-weight: 'semi-bold';
     .phase-green img{
       width: 100%;
     }
+=======
+.phase-intro {
+  background-color: #E7D9C7;
+  display: flex;
+  align-items: center;          /* vertically center content */
+  justify-content: space-between;
+  width: 100vw;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px;
+>>>>>>> e85e8434e1bbcfd06edfb59e71e827793ef7d297
 }
