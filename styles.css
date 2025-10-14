@@ -577,7 +577,7 @@ body{
 
 .AboutUs img {
     width: 100vw;
-    height: 30vh;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -1107,4 +1107,22 @@ font-weight: 'semi-bold';
   width: 45%;
   height: auto;
   border-radius: 8px;          
+}
+
+@media screen and (max-width: 768px) {
+    .phase-beige{
+      flex-direction: column;
+    }
+
+    .phase-green{
+      flex-direction: column;
+    }
+
+    .phase-beige img{
+      width: 100%;
+    }
+
+    .phase-green img{
+      width: 100%;
+    }
 }
