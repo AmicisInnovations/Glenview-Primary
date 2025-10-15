@@ -27,6 +27,10 @@ main{
     flex: 1;
 }
 
+i{
+  color: var(--text-color);
+}
+
 /* ====== Navigation Bar ====== */
 .nav-container {
     font-family:'Teachers';
@@ -221,6 +225,52 @@ li:hover .dropdwn-content {
     }
 }
 
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.show {
+    display: flex;
+    background-color: var(--accent-color);
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .dropdwn-content {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+
+  .dropdwn-content a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links{
+    color: var(--primary-color);
+  }
+
+  .dropdwn{
+    color: var(--primary-color);
+  }
+}
 
 
 /* ====== Celebrating Section ====== */
@@ -268,6 +318,18 @@ li:hover .dropdwn-content {
     height: auto; 
     z-index: 10; 
     opacity: 0.9; 
+}
+
+@media (max-width: 768px) {
+  #celebrating {
+ aspect-ratio: 1200 / 600; 
+}
+
+.image-40{
+  width: 65%;
+  padding: 0.5rem;
+}
+
 }
 
 .learn-more {
@@ -495,6 +557,18 @@ footer img{
 .social-media-links a{
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .contact-container {
+  flex-direction: column;
+}
+
+.contact-container .map iframe {
+  width: 80vw;
+}
+
+}
+
 
 /* ==== Admin Dashboard ==== */
 .main-container-admin{
@@ -1109,7 +1183,6 @@ font-weight: 'semi-bold';
   border-radius: 8px;          
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 768px) {
     .phase-beige{
       flex-direction: column;
@@ -1126,7 +1199,8 @@ font-weight: 'semi-bold';
     .phase-green img{
       width: 100%;
     }
-=======
+  }
+
 .phase-intro {
   background-color: #E7D9C7;
   display: flex;
@@ -1136,5 +1210,36 @@ font-weight: 'semi-bold';
   margin: 0 auto;
   gap: 40px;
   padding: 40px;
->>>>>>> e85e8434e1bbcfd06edfb59e71e827793ef7d297
+}
+
+.HistoryHeader {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+}
+
+.HistoryHeader img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.HistoryHeader::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(2, 84, 44, 0.4); /* Adjust opacity for desired tint */
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.HistoryHeader h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    z-index: 20;
+
 }
