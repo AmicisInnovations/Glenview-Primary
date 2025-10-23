@@ -1243,3 +1243,39 @@ font-weight: 'semi-bold';
     z-index: 20;
 
 }
+
+.fixed-background-section {
+    background-image: url('images/celebratingBG.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*keeps image fixed in place*/
+    height: 40vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.fixed-background-section2 {
+    background-image: url('images/IMG-20251003-WA0006.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*keeps image fixed in place*/
+    height: 40vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fixed-background-section h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    z-index: 1;
+
+}
