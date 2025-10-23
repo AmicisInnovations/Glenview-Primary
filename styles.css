@@ -1229,7 +1229,7 @@ font-weight: 'semi-bold';
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(2, 84, 44, 0.4); /* Adjust opacity for desired tint */
+    background: rgba(2, 84, 44, 0.6); /* Adjust opacity for desired tint */
     pointer-events: none; /* Allows clicks to pass through */
 }
 
@@ -1245,7 +1245,7 @@ font-weight: 'semi-bold';
 }
 
 .fixed-background-section {
-    background-image: url('images/celebratingBG.jpg'); /* Replace with your image path */
+    background-image: url('images/IMG-20251003-WA0024.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /*keeps image fixed in place*/
@@ -1257,7 +1257,7 @@ font-weight: 'semi-bold';
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .fixed-background-section2 {
-    background-image: url('images/IMG-20251003-WA0006.jpg'); /* Replace with your image path */
+    background-image: url('images/IMG-20251003-WA0024.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /*keeps image fixed in place*/
