@@ -349,3 +349,43 @@ eventSubmitBtn.addEventListener('click', async (e) => {
     document.getElementById('price').value = '';
   }
 });
+
+// --- 2️⃣ Fetch event details ---
+    async function fetchEvents() {
+      const { data, error } = await supabase
+        .from('events') // replace with your table name
+        .select('event_name, cost, date, time, description');
+
+      if (error) {
+        console.error("Error fetching events:", error);
+        document.getElementById("event-container").textContent = "Error loading events.";
+        return;
+      }
+
+      // --- 3️⃣ Display the events ---
+      if (data.length === 0) {
+        document.getElementById("event-container").textContent = "No events found.";
+        return;
+      }
+
+      let html = "<table border='1' cellpadding='8' style='border-collapse: collapse;'>";
+      html += "<tr><th>Event</th><th>Description</th><th>Date</th><th>Time</th><th>Cost</th></tr>";
+
+      data.forEach(event => {
+        html += `
+          <tr>
+            <td>${event.event_name}</td>
+            <td>${event.description || '-'}</td>
+            <td>${event.date || '-'}</td>
+            <td>${event.time || '-'}</td>
+            <td>${event.cost || '-'}</td>
+          </tr>
+        `;
+      });
+
+      html += "</table>";
+      document.getElementById("event-container").innerHTML = html;
+
+    }
+
+    fetchEvents();
