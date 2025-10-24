@@ -125,16 +125,17 @@ window.onload = function() {
   }
 };
 </script>
+
 <script>
     // --- 1️⃣ Initialize Supabase ---
-    const SUPABASE_URL = "https://YOUR-PROJECT.supabase.co";
-    const SUPABASE_ANON_KEY = "YOUR-ANON-KEY";
+    const SUPABASE_URL = "https://mzqrbmosncwhwqwiilxk.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16cXJibW9zbmN3aHdxd2lpbHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUxNjAyMTYsImV4cCI6MjA3MDczNjIxNn0.PmGBlwbyuhe7CrjSmYh7zEbMzWfnLX_CN_-Zm5x3qPg";
     const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     // --- 2️⃣ Fetch event details ---
     async function fetchEvents() {
       const { data, error } = await supabase
-        .from('YOUR_TABLE_NAME') // replace with your table name
+        .from('events') // replace with your table name
         .select('event_name, cost, date, time, description');
 
       if (error) {
