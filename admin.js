@@ -352,7 +352,7 @@ eventSubmitBtn.addEventListener('click', async (e) => {
 
 // --- 2️⃣ Fetch event details ---
     async function fetchEvents() {
-      const { data, error } = await supabase
+      const { data, error } = await client
         .from('events') // replace with your table name
         .select('event_name, cost, date, time, description');
 
