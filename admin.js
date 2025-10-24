@@ -388,4 +388,6 @@ eventSubmitBtn.addEventListener('click', async (e) => {
 
     }
 
-    fetchEvents();
+window.addEventListener("DOMContentLoaded", () => {
+  fetchEvents();
+});
