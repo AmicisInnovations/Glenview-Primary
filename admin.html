@@ -99,6 +99,32 @@
       <!-- Supabase client -->
   <script src="https://unpkg.com/@supabase/supabase-js"></script>
   <script src="admin.js"></script>
+  <script>
+function getCurrentWeekKey() {
+  const secret = "mySuperSecretSeed"; // keep this private
+  const now = new Date();
+  const weekNumber = Math.ceil((((now - new Date(now.getFullYear(), 0, 1)) / 86400000) + new Date(now.getFullYear(), 0, 1).getDay() + 1) / 7);
+  return btoa(secret + "-" + now.getFullYear() + "-W" + weekNumber); // base64 encoded key
+}
+
+function checkAccess() {
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("key");
+  const validKey = getCurrentWeekKey();
+  
+  if (key !== validKey) {
+    document.body.innerHTML = "<h2>Access Denied</h2><p>Invalid or expired link.</p>";
+    return false;
+  }
+  return true;
+}
+
+window.onload = function() {
+  if (checkAccess()) {
+    document.getElementById("admin-content").style.display = "block";
+  }
+};
+</script>
 </body>
 </html>
 
