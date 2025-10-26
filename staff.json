@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Mrs. Pretorious",
+    "position": "Principal",
+    "photo": "images/pretorious.jpg"
+  },
+  {
+    "name": "Mrs. Caliste",
+    "position": "Deputy Principal",
+    "photo": "images/caliste.jpg"
+  },
+  {
+    "name": "Mrs. Bromillow",
+    "position": "Foundation Phase HOD",
+    "photo": "images/bromillow.jpg"
+  }
+]

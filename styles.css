@@ -1279,3 +1279,133 @@ font-weight: 'semi-bold';
     z-index: 1;
 
 }
+
+/* ==== STAFF ==== */
+
+
+#intro-section-staff {
+    display: flex;
+    flex-wrap: wrap; /* stack on smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 3rem;
+    min-height: 80vh;
+    width: 100%;
+}
+
+/* ====== Text Container ====== */
+#intro-text-container-staff {
+    flex: 1; /* takes 2/3 of the space */
+    max-width: 800px;
+    position: relative; /* for logo positioning */
+    text-align: center;
+    padding: 1rem;
+}
+
+#intro-text-container-staff::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: url('images/intrologo.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+#intro-text-container-staff * {
+    position: relative;
+    z-index: 10;
+}
+
+#intro-text-container-staff h2 {
+    all: unset;
+    font-family: 'Blaka Hollow';
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
+#intro-text-container-staff p {
+    font-family: 'Teachers';
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.7; /* more breathing room */
+    text-align: center;
+}
+/* ====== Image Container ====== */
+#intro-image-container-staff {
+    flex: 1; 
+    text-align: center; 
+    border: none; 
+}
+
+#intro-image-container-staff img {
+    width: 100%; /* fill container width */
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain;
+}
+
+/* ====== Responsive Adjustments ====== */
+@media (max-width: 768px) {
+    #intro-text-container-staff,
+    #intro-image-container-staff {
+        flex: 1 1 100%; /* full width each */
+        max-width: 100%;
+    }
+
+    #intro-text-container-staff::before {
+        width: 250px;
+        height: 250px;
+        top: 40%;
+    }
+
+    #intro-text-container-staff h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.staff-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.staff-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 200px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.staff-card:hover {
+  transform: scale(1.05);
+}
+
+.staff-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.staff-card h3 {
+  margin-top: 10px;
+  color: var(--accent-color);
+}
+
+.staff-card p {
+  color: var(--accent-color);
+  font-size: 0.9em;
+}

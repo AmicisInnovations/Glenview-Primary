@@ -368,7 +368,7 @@ eventSubmitBtn.addEventListener('click', async (e) => {
         return;
       }
 
-      let html = "<table border='1' cellpadding='8' style='border-collapse: collapse;'>";
+      let html = "<table>";
       html += "<tr><th>Event</th><th>Description</th><th>Date</th><th>Time</th><th>Cost</th></tr>";
 
       data.forEach(event => {
