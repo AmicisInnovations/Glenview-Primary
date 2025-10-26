@@ -1412,7 +1412,7 @@ font-weight: 'semi-bold';
 
 /* == TABLE == */
 
-table {
+.event-container table {
     width: 95%;
     border-collapse: collapse;
     margin-left: 1rem;
