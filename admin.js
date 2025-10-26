@@ -368,7 +368,20 @@ eventSubmitBtn.addEventListener('click', async (e) => {
         return;
       }
 
-      let html = "<table>";
+let html = `
+<table style="
+  width: 95%;
+  border-collapse: collapse;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+">
+`;
+
       html += "<tr><th>Event</th><th>Description</th><th>Date</th><th>Time</th><th>Cost</th></tr>";
 
       data.forEach(event => {

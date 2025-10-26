@@ -1409,17 +1409,3 @@ font-weight: 'semi-bold';
   color: var(--accent-color);
   font-size: 0.9em;
 }
-
-/* == TABLE == */
-
-.event-container table {
-    width: 95%;
-    border-collapse: collapse;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 1rem;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border-radius: 8px;
-    overflow: hidden;
-}
