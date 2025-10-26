@@ -382,7 +382,7 @@ let html = `
 ">
 `;
 
-      html += "<tr><th>Event</th><th>Description</th><th>Date</th><th>Time</th><th>Cost</th></tr>";
+      html += "<thead><tr><th>Event</th><th>Description</th><th>Date</th><th>Time</th><th>Cost</th></tr></thead>";
 
       data.forEach(event => {
         html += `
