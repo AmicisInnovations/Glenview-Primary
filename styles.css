@@ -1350,6 +1350,7 @@ font-weight: 'semi-bold';
     width: 100%; /* fill container width */
     height: auto; /* maintain aspect ratio */
     object-fit: contain;
+    border-radius: 8px;
 }
 
 /* ====== Responsive Adjustments ====== */
