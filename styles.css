@@ -1435,3 +1435,27 @@ tbody tr:hover {
   background-color: #f0f8ff;
   transition: background-color 0.2s ease-in-out;
 }
+
+#our-lions{
+  display: flex;
+  flex-direction: row;
+}
+
+#our-lions .text-container-beige{
+  padding-top: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+.img-container-lions {
+  display: flex;
+  align-items: center;
+  align-self: start;
+  justify-content: center;
+  width: 35%;
+  padding: 0.8rem;
+}
+
+.img-container-lions img{
+  height: 60vh;
+  border-radius: 10px;
+}
