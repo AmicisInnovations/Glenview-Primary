@@ -741,6 +741,20 @@ font-weight: 'semi-bold';
   font-family: 'Teachers';
 }
 
+.text-container-green {
+  flex: 1;   
+  background-color: #02542D;                /* take remaining space */
+  padding: 2rem;
+}
+
+.text-container-green h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--primary-color);            /* optional */
+  text-align: center;
+  font-family: 'Teachers';
+}
+
 .text-container-beige .vision-mission {
   display: flex;
   gap: 40px;                 /* spacing between Vision and Mission blocks */
@@ -767,6 +781,22 @@ font-weight: 'semi-bold';
     font-family: 'Teachers';
 }
 
+.text-container-green h3 {
+    text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+    font-family: 'Teachers';
+}
+
+.text-container-green p {
+    text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--primary-color);
+    font-family: 'Teachers';
+}
 
 
 
