@@ -406,16 +406,34 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function protectPage() {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
+  try {
+    // Ensure supabase client exists
+    if (!supabase || !supabase.auth) {
+      console.error("Supabase client or auth not initialized");
       window.location.href = "login.html";
       return;
     }
-  }
 
-  protectPage();
+    // Fetch current user
+    const { data, error } = await supabase.auth.getUser();
 
-  async function logout() {
-    await supabase.auth.signOut();
+    if (error) {
+      console.error("Error fetching user:", error.message);
+      window.location.href = "login.html";
+      return;
+    }
+
+    const user = data?.user;
+    if (!user) {
+      // Not logged in
+      window.location.href = "login.html";
+      return;
+    }
+
+    console.log("User is logged in:", user.email);
+
+  } catch (err) {
+    console.error("Unexpected error in protectPage:", err);
     window.location.href = "login.html";
   }
+}
