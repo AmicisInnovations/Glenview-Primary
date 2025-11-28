@@ -1489,3 +1489,23 @@ tbody tr:hover {
   height: 60vh;
   border-radius: 10px;
 }
+
+table{
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+th{
+  color: white;
+  padding: 10px;
+  text-align: left;
+  height: 50px;
+  background-color: #02542c;
+}
+td {
+  padding: 10px;
+  text-align: left;
+  height: 50px;
+}
