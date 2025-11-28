@@ -411,7 +411,6 @@ async function protectPage() {
       window.location.href = "login.html";
       return;
     }
-    document.getElementById("admin-content").style.display = "block";
   }
 
   protectPage();
