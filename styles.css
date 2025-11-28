@@ -1401,6 +1401,28 @@ font-weight: 'semi-bold';
         font-size: 2.5rem;
     }
 }
+@media (max-width: 768px) {
+    .resource-box {
+        height: auto;
+        min-height: 250px;
+        margin: 20px 10px;
+    }
+    
+    .resource-content {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .resource-content h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-content h2 {
+        font-size: 18px;
+    }
+}
 
 .staff-container {
   display: grid;
@@ -1537,4 +1559,75 @@ td {
   font-family: 'Teachers';
   font-size: 1.1rem;
   width: 50%;
+}
+
+
+
+.resource-box {
+    position: relative;
+    height: 300px;
+    margin: 30px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #02542c;
+}
+
+
+.resource-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #02542c;
+}
+
+.resource-content {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-content h2 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+}
+
+.resource-content ul {
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+.resource-content li {
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.resource-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.resource-content a:hover {
+    color: #1e7c22;
+    text-decoration: underline;
+}
+
+.resource-content a i {
+    margin-right: 8px;
+    font-size: 14px;
 }
