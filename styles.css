@@ -1498,6 +1498,10 @@ tbody tr:hover {
   padding-left: 0.8rem;
 }
 
+#theHistory .text-container-beige{
+  padding: 0.8rem;
+}
+
 .img-container-lions {
   display: flex;
   align-items: center;
