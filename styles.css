@@ -1491,7 +1491,7 @@ tbody tr:hover {
 }
 
 table{
-  width: 50%;
+  width: 75%;
   height: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -1509,4 +1509,32 @@ td {
   text-align: left;
   height: 50px;
   background-color: #fafafa;
+}
+.fees-text p, h3{
+  font-family: 'Teachers';
+    font-size: 1.1rem;
+    line-height: 1.7; /* more breathing room */
+    text-align: left;
+    padding-left: 10%;
+}
+
+.fees-text ul{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Teachers';
+  font-size: 1.1rem;
+}
+
+.bank-table{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Teachers';
+  font-size: 1.1rem;
+  width: 50%;
 }
