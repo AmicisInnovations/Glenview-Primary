@@ -322,11 +322,11 @@ li:hover .dropdwn-content {
 
 @media (max-width: 768px) {
   #celebrating {
- aspect-ratio: 1200 / 600; 
+ aspect-ratio: 1200 / 660; 
 }
 
 .image-40{
-  width: 65%;
+  width: 85%;
   padding: 0.5rem;
 }
 
@@ -1499,7 +1499,7 @@ tbody tr:hover {
 }
 
 #theHistory .text-container-beige{
-  padding: 0.8rem;
+  padding: 1.2rem;
 }
 
 .img-container-lions {
@@ -1514,6 +1514,17 @@ tbody tr:hover {
 .img-container-lions img{
   height: 60vh;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  #our-lions{
+    flex-direction: column;
+  }
+
+  .img-container-lions{
+    width: 100%;
+  }
+
 }
 
 table{
@@ -1633,4 +1644,49 @@ td {
 .resource-content a i {
     margin-right: 8px;
     font-size: 14px;
+}
+
+#login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login img{
+  width: 15%;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#login h2{
+  margin-bottom: 0.5rem;
+}
+
+#login input{
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  box-sizing: border-box;
+  width: 50%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#login button{
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+#login button:hover{
+  background-color: var(--primary-color);
+  color: var(--accent-color);
 }

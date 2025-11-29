@@ -1,0 +1,20 @@
+  const client = supabase.createClient("https://mzqrbmosncwhwqwiilxk.supabase.co", 
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16cXJibW9zbmN3aHdxd2lpbHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUxNjAyMTYsImV4cCI6MjA3MDczNjIxNn0.PmGBlwbyuhe7CrjSmYh7zEbMzWfnLX_CN_-Zm5x3qPg");
+
+  async function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const { data, error } = await client.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    if (error) {
+      alert("Login failed: " + error.message);
+      return;
+    }
+
+    // redirect to admin page after login
+    window.location.href = "admin.html";
+  }

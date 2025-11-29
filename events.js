@@ -19,7 +19,7 @@
 
       // --- 3️⃣ Display the events ---
       if (data.length === 0) {
-        document.getElementById("event-container").textContent = "No events found.";
+        document.getElementById("event-container").textContent = "No upcoming events.";
         return;
       }
 let html = `
