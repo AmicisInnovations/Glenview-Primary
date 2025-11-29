@@ -79,8 +79,33 @@ i{
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.nav-links:active{
+    background-color: var(--accent-color);
+    opacity: 50%;
+    border-radius: 3px;
+    color: white;
+}
+
+.nav-links:hover{
+    background-color: var(--accent-color);
+    opacity: 50%;
+    border-radius: 3px;
+    color: white;
+}
+
+.nav-links:current{
+    background-color: var(--accent-color);
+    opacity: 50%;
+    border-radius: 3px;
+    color: white;
+}
 
 
 .dropdwn-content {
@@ -1607,6 +1632,7 @@ td {
     height: calc(100% - 40px);
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* vertical scroll when the content overflows */
 }
 
 .resource-content h2 {
