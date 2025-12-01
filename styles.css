@@ -68,6 +68,7 @@ i{
 
 .nav-menu li {
     position: relative;
+    flex-shrink: 0;
 }
 
 .nav-links, .dropdwn {
@@ -80,7 +81,7 @@ i{
     color: var(--text-color);
     font-weight: bold;
     height: 50px;
-    width: 100px;
+    min-width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +115,7 @@ i{
     position: absolute;
     top: 100%;
     left: 0;
-    background: #13571571;
+    background: var(--primary-color);
     box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
     min-width: 180px;
     z-index: 10;
@@ -126,12 +127,12 @@ i{
     font-weight: bold;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .dropdwn-content a:hover {
-    background: #E7D9C7;
-    color: var(--text-color);
+    background: #135715;
+    color: var(--primary-color);
 }
 
 li:hover .dropdwn-content {
@@ -273,10 +274,20 @@ li:hover .dropdwn-content {
     padding: 10px 0;
   }
 
+   .nav-links, .dropdwn {
+        width: 100%;
+        height: auto;
+        min-width: auto;
+        padding: 15px 0;
+        color: var(--primary-color);
+        justify-content: center;
+    }
+
   .dropdwn-content {
     width: 100%;
     position: static;
     box-shadow: none;
+    min-width: auto;
   }
 
   .dropdwn-content a {
