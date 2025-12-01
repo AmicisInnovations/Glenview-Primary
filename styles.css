@@ -115,7 +115,7 @@ i{
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--primary-color);
+    background: var(--accent-color);
     box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
     min-width: 180px;
     z-index: 10;
@@ -127,12 +127,12 @@ i{
     font-weight: bold;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .dropdwn-content a:hover {
-    background: #135715;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--accent-color);
 }
 
 li:hover .dropdwn-content {
@@ -293,7 +293,14 @@ li:hover .dropdwn-content {
   .dropdwn-content a {
     display: block;
     padding: 8px 0;
+    background-color: #E7D9C7;
+    color: var(--text-color);
   }
+
+  .dropdwn-content a:hover {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
 
   .menu-toggle {
     display: block;
@@ -553,33 +560,27 @@ footer img{
     }
 }
 
-#contact-main h1{
-    padding: 1rem;
+#contact-main h1 {
+  padding: 1rem;
 }
 
 /* Main container with flexbox */
 .contact-container {
   display: flex;
-  flex-wrap: wrap;   /* makes it responsive */
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0 1rem;
   align-items: flex-start;
-  margin-left: 1rem;
-  flex-direction: row;
 }
 
-.contact-container .info h3{
-    padding: 0.5rem;
-}
-
-/* Info on the left */
-.contact-container .info {
-  width: 50%;
-}
 
 .contact-container .map {
-  width: 40%;
+  flex: 1 1 300px; /* Same flexible basis for balanced layout */
+  max-width: 300px;
   height: auto;
-  aspect-ratio: 4 / 3;   /* <-- forces square */    /* optional: stops it from getting too wide */
+  aspect-ratio: 4 / 3;
+  max-width: 100%; /* Prevent overflow */
+  margin-top: 0;
 }
 
 .contact-container .map iframe {
@@ -587,22 +588,104 @@ footer img{
   height: 100%;
   border: 0;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
 }
 
-.social-media-links a{
-    text-decoration: none;
+.social-media-links a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
+/* Tablet and smaller laptop */
+@media (max-width: 992px) {
   .contact-container {
-  flex-direction: column;
+    gap: 25px;
+    margin: 0 1rem;
+  }
+  
+  .contact-container .info,
+  .contact-container .map {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  
+  .contact-container .map {
+    margin-top: 0;
+  }
 }
 
-.contact-container .map iframe {
-  width: 80vw;
+/* Mobile devices */
+@media (max-width: 768px) {
+  #contact-main h1 {
+    padding: 0.75rem 1rem;
+    font-size: 1.75rem;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 0.75rem;
+    padding: 0.5rem 0;
+  }
+  
+  .contact-container .info h3 {
+    font-size: 1.25rem;
+    padding: 0.25rem 0;
+  }
+  
+  .contact-container .map {
+    aspect-ratio: 16 / 9; /* Better mobile aspect ratio */
+  }
+  
+  .contact-container .info {
+    order: 2; /* Optional: put info after map on mobile */
+  }
 }
 
+/* Small mobile devices */
+@media (max-width: 480px) {
+  #contact-main h1 {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+  }
+  
+  .contact-container {
+    gap: 15px;
+    margin: 0 0.5rem;
+  }
+  
+  .contact-container .map {
+    aspect-ratio: 16 / 9;
+  }
+  
+  .contact-container .info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-container .map iframe {
+    border-radius: 6px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .contact-container .info {
+    flex: 1 1 100px;
+  }
+  
+  .contact-container .map {
+    margin-top: 50px;
+    flex: 1 1 400px;
+  }
 }
 
 
