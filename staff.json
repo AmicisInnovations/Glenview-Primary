@@ -1,17 +1,203 @@
 [
   {
-    "name": "Mrs. Pretorious",
+    "name": "Mrs. Trudie Pretorius",
     "position": "Principal",
-    "photo": "images/pretorious.jpg"
+    "photo": "images/DSC_2717.jpg"
   },
   {
-    "name": "Mrs. Caliste",
+    "name": "Mrs. Taryn-Leigh Caliste",
     "position": "Deputy Principal",
-    "photo": "images/caliste.jpg"
+    "photo": "images/DSC_3865.jpg"
   },
   {
-    "name": "Mrs. Bromillow",
-    "position": "Foundation Phase HOD",
-    "photo": "images/bromillow.jpg"
+    "name": "Miss Monica Tema",
+    "position": "Deputy Principal",
+    "photo": "images/DSC_3935.jpg"
+
+  },
+  {
+    "name": "Mrs Mpho Mphalele",
+    "position": "Admissions Officer",
+    "photo": "images/DSC_3870.jpg"
+  },
+  {
+    "name": "Mrs Ilonka Brits",
+    "position": "Bursar",
+    "photo": "images/DSC_3884.jpg"
+  },
+    {
+    "name": "Mrs Meriam Ramara",
+    "position": "Finance Administrator",
+    "photo": "images/DSC_3896.jpg"
+  },
+      {
+    "name": "Mrs Bernadene Kruger",
+    "position": "Grade R",
+    "photo": "images/DSC_3870.jpg"
+  },
+      {
+    "name": "Mrs Shadia Maleking",
+    "position": "Grade R",
+    "photo": "images/DSC_3870.jpg"
+  },
+    {
+    "name": "Mrs Bianca Henry",
+    "position": "Grade 1",
+    "photo": "images/1A.jpg"
+  },
+    {
+    "name": "Mrs Daniella Bisset",
+    "position": "Grade R & 1 HOD, Sport and Culture",
+    "photo": "images/1B.jpg"
+  },
+    {
+    "name": "Mrs Caitlin Xavier",
+    "position": "Grade 1 - Grade Head",
+    "photo": "images/1C.jpg"
+  },
+    {
+    "name": "Mrs Melanie Nortjie",
+    "position": "Grade 1",
+    "photo": "images/1E.jpg"
+  },
+      {
+    "name": "Mrs Marion Botha",
+    "position": "Grade 1",
+    "photo": "images/1D.jpg"
+  },
+    {
+    "name": "Mrs Andrea Keeling",
+    "position": "Grade 2 & 3 HOD",
+    "photo": "images/2A.jpg"
+  },
+    {
+    "name": "Miss Bodine Mangera",
+    "position": "Grade 2 - Grade Head",
+    "photo": "images/2B.jpg"
+  },
+       {
+    "name": "Mrs Veronica Qwabe",
+    "position": "Grade 2E",
+    "photo": "images/DSC_3870.jpg"
+  },
+      {
+    "name": "Mr Jabulile Zwane",
+    "position": "Grade 3 - Grade Head, Head of Choir",
+    "photo": "images/3A.jpg"
+  },
+      {
+    "name": "Mrs Miranda Petersen",
+    "position": "Grade 3",
+    "photo": "images/3B.jpg"
+  },
+      {
+    "name": "Miss Angelique De Magalhaes",
+    "position": "Grade 3",
+    "photo": "images/3E.jpg"
+  },
+      {
+    "name": "Miss Noluthando Mazibuko",
+    "position": "Grade 3",
+    "photo": "images/3C.jpg"
+  },
+      {
+    "name": "Miss Sanchia Naidoo",
+    "position": "Grade 4",
+    "photo": "images/3D.jpg"
+  },
+      {
+    "name": "Mrs Tarryn Strauss",
+    "position": "Grade 4 - Grade Head",
+    "photo": "images/4A.jpg"
+  },
+      {
+    "name": "Mrs Karien Visser",
+    "position": "Grade 4",
+    "photo": "images/4B.jpg"
+  },
+      {
+    "name": "Miss Mathapelo Mokoena",
+    "position": "Grade 4",
+    "photo": "images/4C.jpg"
+  },
+      {
+    "name": "Mrs Micayla Pexirra",
+    "position": "Grade 4",
+    "photo": "images/4D.jpg"
+  },
+      {
+    "name": "Mr Jeff Chigwada",
+    "position": "Grade 5",
+    "photo": "images/5B.jpg"
+  },
+      {
+    "name": "Miss Khanyisile Thumbathi",
+    "position": "Grade 5",
+    "photo": "images/5C.jpg"
+  },
+      {
+    "name": "Mrs Zothani Hadebe",
+    "position": "Grade 5",
+    "photo": "images/5D.jpg"
+  },
+      {
+    "name": "Miss Lungelo Mthembu",
+    "position": "Grade 5",
+    "photo": "images/5E.jpg"
+  },
+      {
+    "name": "Miss Catia Ramos",
+    "position": "Grade 5",
+    "photo": "images/6A.jpg"
+  },
+      {
+    "name": "Miss Lerato Kganyago",
+    "position": "Grade 6",
+    "photo": "images/6B.jpg"
+  },
+      {
+    "name": "Mrs Kgauhelo Mukwevho",
+    "position": "Grade 6",
+    "photo": "images/6C.jpg"
+  },
+      {
+    "name": "Miss Thandiwe Mtshazo",
+    "position": "Grade 6",
+    "photo": "images/6D.jpg"
+  },
+      {
+    "name": "Mrs Sukoluhle Chigwada",
+    "position": "Grade 6",
+    "photo": "images/DSC_3870.jpg"
+  },
+      {
+    "name": "Mr Thabo Raboteng",
+    "position": "Grade 6 & Sciences HOD",
+    "photo": "images/DSC_3870.jpg"
+  },
+      {
+    "name": "Mrs Ronel Taljaard",
+    "position": "Grade 6 & Language HOD",
+    "photo": "images/DSC_3929.jpg"
+  },
+      {
+    "name": "Mr Sandile Chigwada",
+    "position": "Grade 7",
+    "photo": "images/7A.jpg"
+  },
+      {
+    "name": "Mr Vusi Mtshali",
+    "position": "Grade 7",
+    "photo": "images/7B.jpg"
+  },
+      {
+    "name": "Mrs Osanga Koyo",
+    "position": "Grade 7",
+    "photo": "images/7C.jpg"
+  },
+      {
+    "name": "Mr Mduduzi Manqele",
+    "position": "Grade 7 - Senior Phase, EMS, LO & Mathematics HOD",
+    "photo": "images/DSC_3932.jpg"
   }
 ]
