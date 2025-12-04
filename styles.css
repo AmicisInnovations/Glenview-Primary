@@ -1825,3 +1825,7 @@ td {
   background-color: var(--primary-color);
   color: var(--accent-color);
 }
+
+.close-btn i{
+  color: var(--primary-color);
+}

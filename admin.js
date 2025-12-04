@@ -82,7 +82,7 @@ document.getElementById("uploadBtn-Resources").addEventListener("click", async (
         return;
     }
 
-    const filePath = `${folder}/${Date.now()}-${file.name}`;
+    const filePath = `${folder}/${file.name}`;
     let { data, error } = await client.storage
         .from(BUCKET_NAME)
         .upload(filePath, file);
