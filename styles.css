@@ -796,7 +796,7 @@ body{
 
 @media (max-width: 768px) {
     .AboutUs h1{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
   
 }
@@ -1244,6 +1244,15 @@ textarea {
     font-size: 4rem;
     z-index: 1;
 }
+
+@media (max-width: 768px) {
+    .Newsletters h1{
+        font-size: 3rem;
+    }
+  
+}
+
+
 
 .main-container-news h2{
     margin-left: 1rem;
