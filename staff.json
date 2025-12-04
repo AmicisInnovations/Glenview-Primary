@@ -63,12 +63,17 @@
       {
     "name": "Mrs Marion Botha",
     "position": "Grade 1",
-    "photo": "images/1D.JPG"
+    "photo": "images/2D.JPG"
   },
     {
     "name": "Mrs Andrea Keeling",
     "position": "Grade 2 & 3 HOD",
     "photo": "images/2A.JPG"
+  },
+  {
+    "name": "Miss Monique Van Deventer",
+    "position": "Grade 2",
+    "photo": "images/1D.JPG"
   },
     {
     "name": "Miss Bodine Mangera",
@@ -153,22 +158,22 @@
       {
     "name": "Miss Lerato Kganyago",
     "position": "Grade 6",
-    "photo": "images/6B.JPG"
+    "photo": "images/4E.JPG"
   },
       {
     "name": "Mrs Kgauhelo Mukwevho",
     "position": "Grade 6",
-    "photo": "images/6C.JPG"
+    "photo": "images/6B.JPG"
   },
       {
     "name": "Miss Thandiwe Mtshazo",
     "position": "Grade 6",
-    "photo": "images/6D.JPG"
+    "photo": "images/6C.JPG"
   },
       {
     "name": "Mrs Sukoluhle Chigwada",
     "position": "Grade 6",
-    "photo": "images/DSC_3870.JPG"
+    "photo": "images/6D.JPG"
   },
       {
     "name": "Mr Thabo Raboteng",
