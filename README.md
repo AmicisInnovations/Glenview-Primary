@@ -32,7 +32,7 @@ If you are experiencing any technical difficulties or notice any bugs within the
 
 ## 🌐 Website
 
-Visit the Glenview Primary School website (temporary link): 
-🔗[http://www.amicisinnovations.co.za/Glenview-Primary/]
+Visit the Glenview Primary School website: 
+🔗[http://www.glenview-primary.co.za]
 
 
